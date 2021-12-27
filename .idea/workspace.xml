@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11ec4418-f594-4baf-9712-2a207b2da300" name="Changes" comment="" />
+    <list default="true" id="11ec4418-f594-4baf-9712-2a207b2da300" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pelanggan/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pelanggan/masuk/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/auth/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/masuk/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/dashboard/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/auth/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/pelanggan/daftar/index.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,10 +18,14 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="22pkwGYmgo9UfwMVuI5VbkyeUTq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -22,19 +34,21 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/customer/auth" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\adt\pelanggan\masuk" />
       <recent name="C:\xampp\htdocs\adt\customer\auth" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\adt\admin\masuk" />
+      <recent name="C:\xampp\htdocs\adt\pelanggan\daftar" />
+      <recent name="C:\xampp\htdocs\adt\pelanggan" />
+      <recent name="C:\xampp\htdocs\adt\admin" />
       <recent name="C:\xampp\htdocs\dist\admin\auth" />
-      <recent name="C:\xampp\htdocs\dist" />
-      <recent name="C:\xampp\htdocs\dist\admin\dashboard" />
-      <recent name="C:\xampp\htdocs\dist\admin" />
-      <recent name="C:\xampp\htdocs\dist\pages" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -46,11 +60,24 @@
       <option name="presentableId" value="Default" />
       <updated>1640542152592</updated>
       <workItem from="1640542153719" duration="2939000" />
-      <workItem from="1640545223489" duration="5115000" />
+      <workItem from="1640545223489" duration="6736000" />
+      <workItem from="1640617853905" duration="5951000" />
+      <workItem from="1640631114048" duration="3567000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
