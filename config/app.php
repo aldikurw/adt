@@ -9,7 +9,7 @@ use Medoo\Medoo;
 $config["host"] = "localhost";
 $config["username"] = "root";
 $config["password"] = "";
-$config["db"] = "my-isp";
+$config["db"] = "isp";
 
 $db = new Medoo([
     'type' => 'mysql',

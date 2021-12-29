@@ -2,23 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11ec4418-f594-4baf-9712-2a207b2da300" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/dashboard/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/dashboard/pages/dashboard.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/admin/masuk.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/pelanggan/masuk.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/Medoo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pelanggan/dashboard/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/dashboard/logout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/masuk/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/masuk/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/dashboard/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/dashboard/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/dashboard/pages/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/dashboard/pages/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pelanggan/daftar/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/pelanggan/daftar/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pelanggan/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pelanggan/masuk/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/pelanggan/masuk/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

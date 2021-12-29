@@ -88,7 +88,7 @@ $pengaturan = $db->select("pengaturan", "*")[0];
                         <?php
                         if ($logged) {
                             echo <<<EOL
-                                <a href="pelanggan/dashboard"
+                                <a href="admin/dashboard"
                                    class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
                                     <span>Dashboard</span>
                                     <i class="bi bi-arrow-right"></i>
