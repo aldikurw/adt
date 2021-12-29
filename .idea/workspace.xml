@@ -2,13 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11ec4418-f594-4baf-9712-2a207b2da300" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pelanggan/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pelanggan/masuk/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/dashboard/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/dashboard/pages/dashboard.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/admin/masuk.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/pelanggan/masuk.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/Medoo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pelanggan/dashboard/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/auth/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/masuk/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/dashboard/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/auth/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/pelanggan/daftar/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/masuk/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/masuk/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pelanggan/daftar/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/pelanggan/daftar/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pelanggan/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pelanggan/masuk/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/pelanggan/masuk/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +31,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4" />
   <component name="ProjectId" id="22pkwGYmgo9UfwMVuI5VbkyeUTq" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -34,21 +53,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../my-isp" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\isp\config" />
       <recent name="C:\xampp\htdocs\adt\pelanggan\masuk" />
       <recent name="C:\xampp\htdocs\adt\customer\auth" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\adt\admin\masuk" />
-      <recent name="C:\xampp\htdocs\adt\pelanggan\daftar" />
-      <recent name="C:\xampp\htdocs\adt\pelanggan" />
-      <recent name="C:\xampp\htdocs\adt\admin" />
-      <recent name="C:\xampp\htdocs\dist\admin\auth" />
+      <recent name="C:\xampp\htdocs\isp\admin\dashboard" />
+      <recent name="C:\xampp\htdocs\isp\pelanggan\daftar" />
+      <recent name="C:\xampp\htdocs\isp\pelanggan\masuk" />
+      <recent name="C:\xampp\htdocs\isp\admin\masuk" />
+      <recent name="C:\xampp\htdocs\isp\pelanggan" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -62,7 +82,11 @@
       <workItem from="1640542153719" duration="2939000" />
       <workItem from="1640545223489" duration="6736000" />
       <workItem from="1640617853905" duration="5951000" />
-      <workItem from="1640631114048" duration="3567000" />
+      <workItem from="1640631114048" duration="3841000" />
+      <workItem from="1640656555862" duration="5680000" />
+      <workItem from="1640677670514" duration="5187000" />
+      <workItem from="1640706964355" duration="6317000" />
+      <workItem from="1640733903647" duration="5769000" />
     </task>
     <servers />
   </component>

@@ -1,3 +1,16 @@
+<?php
+require_once "../../config/app.php";
+
+if (isset($_SESSION["id_pelanggan"])) {
+    $id_exist = $db->has("pelanggan", ["id_pelanggan" => $_SESSION["id_pelanggan"]]);
+    if ($id_exist) {
+        header("Location: ../dashboard");
+        exit();
+    } else {
+        session_destroy();
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +38,7 @@
 
                 <h1 class="auth-title"><a href="../.."><</a> Daftar</h1>
 
-                <form action="../../api/admin/auth.php">
+                <form>
                     <div class="col-12 mb-3">
                         <div class="form-floating">
                             <input type="text" class="form-control" name="nama_lengkap" placeholder="#" required>

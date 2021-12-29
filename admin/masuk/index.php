@@ -1,8 +1,18 @@
 <?php
-session_start();
+require_once "../../config/app.php";
 
-if (isset($_SESSION["id_admin"])) {
-    header("Location: ../dashboard");
+$authorized = false;
+if (isset($_SESSION["level_akun"])) {
+    if ($_SESSION["level_akun"] === "admin") {
+        $authorized = $db->has("admin", ["id_admin" => $_SESSION["id_admin"]]);
+        if ($authorized) {
+            header("Location: ../dashboard");
+            exit();
+        }
+    } else {
+        header("Location: ../../pelanggan");
+        exit();
+    }
 }
 ?>
 
@@ -19,47 +29,62 @@ if (isset($_SESSION["id_admin"])) {
     <link rel="stylesheet" href="../../assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="../../assets/css/app.css">
     <link rel="stylesheet" href="../../assets/css/pages/auth.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="../../assets/js/app.js"></script>
 </head>
 
 <body>
-    <div id="auth">
-        
-<div class="row h-100">
-    <div class="col-lg-5 col-12">
-        <div id="auth-left">
-            <div class="auth-logo">
-                <a href="../.."><img src="../../assets/images/logo/logo.png" alt="Logo"></a>
+<div id="auth">
+
+    <div class="row h-100">
+        <div class="col-lg-5 col-12">
+            <div id="auth-left">
+                <div class="auth-logo">
+                    <a href="../.."><img src="../../assets/images/logo/logo.png" alt="Logo"></a>
+                </div>
+                <h1 class="auth-title"><a href="../.."><</a> Masuk</h1>
+                <!--            <p class="auth-subtitle mb-5">Masuk sebagai admin</p>-->
+
+                <form>
+                    <div class="form-floating mb-4">
+                        <input type="text" class="form-control" name="username" placeholder="#" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="form-floating mb-4">
+                        <input type="password" class="form-control" name="password" placeholder="#" required>
+                        <label>Password</label>
+                    </div>
+
+                    <button class="btn btn-primary btn-block btn-lg shadow-lg">Masuk</button>
+                </form>
             </div>
-            <h1 class="auth-title"><a href="../.."><</a> Masuk</h1>
-<!--            <p class="auth-subtitle mb-5">Masuk sebagai admin</p>-->
+        </div>
+        <div class="col-lg-7 d-none d-lg-block">
+            <div id="auth-right">
 
-            <form action="../../api/admin/auth.php" id="login-form">
-                <div class="form-floating mb-4">
-                    <input type="text" class="form-control" name="username" placeholder="#">
-                    <label>Username</label>
-                </div>
-                <div class="form-floating mb-4">
-                    <input type="password" class="form-control" name="password" placeholder="#">
-                    <label>Password</label>
-                </div>
-<!--                <div class="form-check form-check-lg d-flex align-items-end">-->
-<!--                    <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault">-->
-<!--                    <label class="form-check-label text-gray-600" for="flexCheckDefault">-->
-<!--                        Keep me logged in-->
-<!--                    </label>-->
-<!--                </div>-->
-                <button class="btn btn-primary btn-block btn-lg shadow-lg">Masuk</button>
-            </form>
+            </div>
         </div>
     </div>
-    <div class="col-lg-7 d-none d-lg-block">
-        <div id="auth-right">
 
-        </div>
-    </div>
 </div>
-
-    </div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script>
+    document.forms[0].onsubmit = evt => {
+        evt.preventDefault();
+        fetch("../../api/admin/masuk.php", {
+            method: "POST",
+            body: formDataToJson(new FormData(document.forms[0]))
+        })
+            .then(response => response.json())
+            .then(result => {
+                if (result.success) {
+                    location.href = "../dashboard";
+                } else {
+                    showToast(result.success, result.message);
+                }
+            });
+    }
+</script>
 </body>
 
 </html>

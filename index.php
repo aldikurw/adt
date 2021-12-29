@@ -1,3 +1,8 @@
+<?php
+require_once "config/app.php";
+$logged = isset($_SESSION["id_admin"]) || isset($_SESSION["id_pelanggan"]);
+$pengaturan = $db->select("pengaturan", "*")[0];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +10,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>CV Perdana Mitra Inovasi</title>
+    <title><?= $pengaturan["nama_usaha"] ?></title>
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
@@ -51,8 +56,18 @@
                 <li><a class="nav-link scrollto active" href="#home">Home</a></li>
                 <li><a class="nav-link scrollto" href="#harga">Harga</a></li>
                 <li><a class="nav-link scrollto" href="#kontak">Kontak</a></li>
-                <li><a class="nav-link scrollto" href="pelanggan/masuk" id="btn-masuk">Masuk</a></li>
-                <li><a class="getstarted scrollto" href="pelanggan/daftar">Daftar Sekarang</a></li>
+                <?php
+                    if ($logged) {
+                        echo <<<EOL
+                            <li><a class="getstarted scrollto" href="pelanggan/dashboard">Dashboard</a></li>
+                        EOL;
+                    } else {
+                        echo <<<EOL
+                            <li><a class="nav-link scrollto" href="pelanggan/masuk" id="btn-masuk">Masuk</a></li>
+                            <li><a class="getstarted scrollto" href="pelanggan/daftar">Daftar Sekarang</a></li>
+                        EOL;
+                    }
+                ?>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
@@ -66,17 +81,29 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 d-flex flex-column justify-content-center">
-                <h1 data-aos="fade-up">CV Perdana Mitra Inovasi</h1>
-                <h2 data-aos="fade-up" data-aos-delay="400">Solusi Internet Berkelas dan Cerdas Untuk Aktivitas Tanpa
-                    Batas
-                </h2>
+                <h1 data-aos="fade-up"><?= $pengaturan["nama_usaha"] ?></h1>
+                <h2 data-aos="fade-up" data-aos-delay="400"><?= $pengaturan["slogan"] ?></h2>
                 <div data-aos="fade-up" data-aos-delay="600">
                     <div class="text-center text-lg-start">
-                        <a href="pelanggan/daftar"
-                           class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-                            <span>Daftar Sekarang</span>
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
+                        <?php
+                        if ($logged) {
+                            echo <<<EOL
+                                <a href="pelanggan/dashboard"
+                                   class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                                    <span>Dashboard</span>
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            EOL;
+                        } else {
+                            echo <<<EOL
+                            <a href="pelanggan/daftar"
+                                class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                                <span>Daftar Sekarang</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                            EOL;
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -187,28 +214,28 @@
                             <div class="info-box">
                                 <i class="bi bi-geo-alt"></i>
                                 <h3>Alamat</h3>
-                                <p>Rejoagung, Kec. Ploso, Kab. Jombang</p>
+                                <p><?= $pengaturan["alamat"] ?></p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="info-box">
                                 <i class="bi bi-telephone"></i>
                                 <h3>Telepon</h3>
-                                <p>0857-3097-7330</p>
+                                <p><?= $pengaturan["telepon"] ?></p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="info-box">
                                 <i class="bi bi-envelope"></i>
                                 <h3>Email</h3>
-                                <p>sales@perdanamitrainovasi.com</p>
+                                <p><?= $pengaturan["email"] ?></p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="info-box">
                                 <i class="bi bi-clock"></i>
-                                <h3>Jam Buka</h3>
-                                <p>Senin - Sabtu 9:00 - 17:00</p>
+                                <h3>Jam Operasional</h3>
+                                <p><?= $pengaturan["jam_operasional"] ?></p>
                             </div>
                         </div>
                     </div>
